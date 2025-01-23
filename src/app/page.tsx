@@ -37,31 +37,24 @@ import { ContextualRisk } from "@/components/dashboard/ContextualRisk";
 
 export default function Dashboard() {
   return (
-    <div
-      className="
-        grid
-        grid-cols-1
-        lg:grid-cols-12
-        gap-6
-        p-6
-        max-h-[calc(100vh-4rem)]
-        overflow-scroll
-        scrollbar-hide
-
-      "
-    >
+    <div className="grid max-h-[calc(100vh-4rem)] grid-cols-1 gap-6  p-6 lg:grid-cols-12">
       {/* Left Panel (Description) */}
       <div className="md:col-span-4">
         <DescriptionPanel />
       </div>
 
       {/* Center Panel (Graph) */}
-      <div className="md:col-span-5">
+      <div className="space-y-6 md:col-span-8">
         <GraphVisualization />
+
+        <div className="hidden lg:grid md:grid-cols-2 md:gap-6">
+          <RiskSummary />
+          <ContextualRisk />
+        </div>
       </div>
 
       {/* Right Panel (Risk widgets) */}
-      <div className="md:col-span-3 space-y-6">
+      <div className="lg:hidden block space-y-6 md:col-span-3">
         <RiskSummary />
         <ContextualRisk />
       </div>

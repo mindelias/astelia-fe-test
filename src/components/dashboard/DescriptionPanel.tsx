@@ -102,7 +102,9 @@ export function DescriptionPanel() {
   ]
 
   return (
+    <section className="overflow-scroll scrollbar-hide max-h-[calc(100vh-6rem)]">
     <Card className="p-4 space-y-6 max-w-sm">
+      
       {/* Top: Description */}
       <div>
         <h2 className="text-xl font-semibold text-green-700">Description</h2>
@@ -195,6 +197,7 @@ export function DescriptionPanel() {
         </div>
       </div>
     </Card>
+    </section>
   )
 }
 
