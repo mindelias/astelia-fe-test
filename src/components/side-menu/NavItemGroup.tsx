@@ -98,10 +98,10 @@ export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavI
                   asChild
                   size="sm"
                   className={cn(
-                    "flex items-center gap-3 p-2 rounded-md transition-all",
+                    "flex items-center gap-3 py-5 px-5 rounded-md transition-all text-[15px]",
                     isActive
-                      ? "bg-green-50 text-green-600 font-semibold"
-                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-800",
+                      ? "bg-green-50 rounded-md text-[#525D73] font-normal "
+                      : "text-gray-600 hover:bg-gray-100  hover:text-gray-800",
                     isCollapsed && "justify-center"
                   )}
                 >
@@ -111,7 +111,7 @@ export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavI
                       <img
                         src={icon}
                         alt={item.title}
-                        className="w-5 h-5 group-hover:scale-110 transition-transform"
+                        className="w-6 h-6 group-hover:scale-110  transition-transform"
                       />
                     )}
                     {!isCollapsed && <span className="ml-3">{item.title}</span>}
