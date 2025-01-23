@@ -77,18 +77,18 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton
               size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+              className=""
             >
-              <div className="flex items-center justify-between px-4 py-2">
+              <div className=" ">
                 {/* Full Logo when expanded */}
 
                 {!isCollapsed ? (
                   <Image
                     src={Logo as string}
                     alt="Logo"
-                    width={150}
-                    height={50}
-                    className="h-auto w-auto"
+                    // width={50}
+                    // height={50}
+                    className="h-25 w-25"
                   />
                 ) : (
                   // Collapsed Logo
@@ -97,7 +97,7 @@ export function AppSidebar() {
                     alt="Logo"
                     width={20}
                     height={20}
-                    className="h-auto w-auto"
+                    // className="h-auto w-auto"
                   />
                 )}
               </div>
@@ -113,15 +113,20 @@ export function AppSidebar() {
           isCollapsed={isCollapsed}
           currentPath={pathname}
         />
+        {/* <NavItemGroup
+          items={menu.navSecondary}
+          isCollapsed={isCollapsed}
+          currentPath={pathname}
+        /> */}
+      </SidebarContent>
+
+      {/* Sidebar Footer */}
+      <SidebarFooter>
         <NavItemGroup
           items={menu.navSecondary}
           isCollapsed={isCollapsed}
           currentPath={pathname}
         />
-      </SidebarContent>
-
-      {/* Sidebar Footer */}
-      <SidebarFooter>
         {!isCollapsed && (
           <div className="flex items-center px-4 py-2">
             <PersonStanding className="mr-2 h-6 w-6" />
@@ -132,7 +137,7 @@ export function AppSidebar() {
           </div>
         )}
       </SidebarFooter>
-      <SidebarRail>
+      {/* <SidebarRail >
         <Image
           src={CollapsedLogo as string}
           alt="Logo"
@@ -140,7 +145,7 @@ export function AppSidebar() {
           height={20}
           className="h-auto w-auto"
         />
-      </SidebarRail>
+      </SidebarRail> */}
     </Sidebar>
   );
 }
