@@ -10,15 +10,6 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { getIcon } from "@/utils/icon-map";
 
-interface NavItemGroupProps {
-  items: {
-    title: string;
-    url: string;
-    icon: string; // Icon name matching the `iconMap`
-  }[];
-  isCollapsed: boolean; // State for collapsed/expanded behavior
-  currentPath: string; // Pass the current path explicitly
-}
 
 export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavItemGroupProps & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (
