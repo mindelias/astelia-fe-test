@@ -14,6 +14,11 @@ export default function Dashboard() {
       {/* Left Panel (Description) */}
       <Card className="max-h-[calc(100vh-3rem)] overflow-scroll p-5 scrollbar-hide md:col-span-5 xl:col-span-4">
         <DescriptionPanel />
+
+        <div className="hidden sm:block space-y-6 lg:hidden">
+          <GraphVisualization />
+        </div>
+
         <div className="block space-y-6 lg:hidden">
           <AssetAndContextualRisk />
         </div>

@@ -31,6 +31,7 @@ export function GraphVisualization() {
         </div>
 
         <Separator className="h-[1px] w-full" />
+        {/* TODO: Replace with real data */}
         <div className="flex gap-5 p-5">
           <div className="flex items-center space-x-1">
             <Avatar className="flex h-7 w-7 items-center justify-center bg-red-500 text-center">
