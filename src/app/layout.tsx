@@ -9,10 +9,12 @@ import { type Metadata } from "next";
 
 const publicSans = Public_Sans({
   subsets: ["latin"], // Adjust subsets as needed
-  weight: ["400", "600"], // Specify weights (optional)
+  weight: ["400", "600", "700", "900"], // Specify weights (optional)
   variable: "--font-public-sans", // Adds CSS variable
   display: "swap", // Ensures fallback fonts are displayed immediately
 });
+
+ 
 
 
 export const metadata: Metadata = {
@@ -27,7 +29,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={publicSans.variable}>
+    <html lang="en" className={publicSans.className}>
       <body className="overflow-hidden h-screen">
         {" "}
         <SidebarProvider>
