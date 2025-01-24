@@ -19,7 +19,9 @@ import Logo from "@/assets/full-logo.svg";
 import CollapsedLogo from "@/assets/logo.svg";
 import Image from "next/image";
 import { PersonStanding } from "lucide-react";
-
+import { Card } from "../ui/card";
+import { cn } from "@/lib/utils";
+import { CustomSidebarFooter } from "./CustomSidebarFooter";
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -27,9 +29,16 @@ export function AppSidebar() {
   const isCollapsed = state === "collapsed"; // Use sidebar state to track collapsed/expanded
 
   return (
-    <Sidebar collapsible="icon" className="my-4 rounded-md">
+    // <div className="relative my-4  ">
+    <Sidebar
+      collapsible="icon"
+      className={cn(
+        "rounded-md transition-all duration-300",
+        isCollapsed ? "!w-20 px-2" : "px-4",
+      )}
+    >
       {/* Sidebar Header */}
-      <SidebarHeader className="relative">
+      <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" className="">
@@ -51,7 +60,7 @@ export function AppSidebar() {
                     alt="Logo"
                     width={20}
                     height={20}
-                    // className="h-auto w-auto"
+                    className=""
                   />
                 )}
               </div>
@@ -78,22 +87,23 @@ export function AppSidebar() {
       </SidebarContent>
 
       {/* Sidebar Footer */}
-      <SidebarFooter>
+      {/* <SidebarFooter>
         <NavItemGroup
           items={menu.navSecondary}
           isCollapsed={isCollapsed}
           currentPath={pathname}
         />
-        {!isCollapsed && (
-          <div className="flex items-center px-4 py-2">
-            <PersonStanding className="mr-2 h-6 w-6" />
-            <div>
-              <p className="text-sm font-medium">Lorem Ipsum</p>
-              <p className="text-xs text-muted">User Profile</p>
-            </div>
+
+        <div className="flex items-center px-4 py-2">
+          <PersonStanding className="mr-2 h-6 w-6" />
+          <div>
+            <p className="text-sm font-medium">Lorem Ipsum</p>
+            <p className="text-xs text-muted">User Profile</p>
           </div>
-        )}
-      </SidebarFooter>
+        </div>
+      </SidebarFooter> */}
+            <CustomSidebarFooter menu={menu} isCollapsed={isCollapsed} pathname={pathname} />
+
       {/* <SidebarRail >
         <Image
           src={CollapsedLogo as string}
@@ -104,5 +114,6 @@ export function AppSidebar() {
         />
       </SidebarRail> */}
     </Sidebar>
+    // </div>
   );
 }
