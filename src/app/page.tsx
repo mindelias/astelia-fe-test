@@ -1,63 +1,49 @@
 "use client";
 
-// import React, { useState } from "react";
-// import { ReactFlow } from "@xyflow/react";
-
 import "@xyflow/react/dist/style.css";
-import { Button } from "@/components/ui/button";
-
-// const initialNodes = [
-//   { id: "1", position: { x: 100, y: 100 }, data: { label: "1" } },
-//   { id: "2", position: { x: 200, y: 200 }, data: { label: "2" } },
-// ];
-// const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
-
-// export default function HomePage() {
-//   const [count, setCount] = useState(0);
-
-//   return (
-//     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b">
-//       <h1 className="p-4 text-2xl font-bold">Your Code should be here</h1>
-//       <div className="flex flex-col items-center justify-center">
-//         <p>count is: {count}</p>
-//         <Button onClick={() => setCount(count + 1)}>Click me</Button>
-//       </div>
-//       <div style={{ width: "50vw", height: "50vh" }}>
-//         <ReactFlow nodes={initialNodes} edges={initialEdges} />
-//       </div>
-//     </main>
-//   );
-// }
 
 import React from "react";
 import { DescriptionPanel } from "@/components/dashboard/DescriptionPanel";
-import { GraphVisualization } from "@/components/dashboard/GraphVisualization";
+import { GraphVisualization } from "@/components/dashboard/graphivisualization";
+// import { GraphVisualization } from "@/components/dashboard/GraphVisualization";
 import { RiskSummary } from "@/components/dashboard/RiskSummary";
 import { ContextualRisk } from "@/components/dashboard/ContextualRisk";
+import { Card } from "@/components/ui/card";
+import { AssetAndContextualRisk } from "@/components/dashboard/KeyValueList";
 
 export default function Dashboard() {
   return (
-    <div className="grid max-h-[calc(100vh-4rem)] grid-cols-1 gap-6  p-6 lg:grid-cols-12">
+    <div className="grid max-h-[calc(100vh-4rem)] grid-cols-1 gap-6 p-6 lg:grid-cols-12">
       {/* Left Panel (Description) */}
-      <div className="md:col-span-4">
+      <Card className="max-h-[calc(100vh-6rem)] overflow-scroll p-5 scrollbar-hide md:col-span-4">
         <DescriptionPanel />
-      </div>
+        <div className="block space-y-6 lg:hidden">
+          <AssetAndContextualRisk />
+        </div>
+      </Card>
 
       {/* Center Panel (Graph) */}
-      <div className="space-y-6 md:col-span-8">
+      <Card className="space-y-6 p-5  hidden lg:block md:col-span-8 max-h-[calc(100vh-7rem)] overflow-scroll scrollbar-hide ">
         <GraphVisualization />
-
-        <div className="hidden lg:grid md:grid-cols-2 md:gap-6">
+        {/* <div className="hidden  lg:grid  md:grid-cols-2 md:gap-6">
           <RiskSummary />
           <ContextualRisk />
+        </div> */}
+        {/* Here we replace your old RiskSummary / ContextualRisk with our new component */}
+        <div className="hidden lg:block">
+          <AssetAndContextualRisk />
         </div>
-      </div>
+      </Card>
 
       {/* Right Panel (Risk widgets) */}
-      <div className="lg:hidden block space-y-6 md:col-span-3">
+      {/* <div className="lg:hidden block space-y-6 md:col-span-3">
         <RiskSummary />
         <ContextualRisk />
-      </div>
+      </div> */}
+      {/* On smaller screens, show the new component instead of in the card above */}
+      {/* <div className="block space-y-6 md:col-span-3 lg:hidden">
+        <AssetAndContextualRisk />
+      </div> */}
     </div>
   );
 }
