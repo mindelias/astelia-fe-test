@@ -29,7 +29,7 @@ export default function RootLayout({
         {" "}
         <SidebarProvider>
           <AppSidebar />
-          <main>
+          <main >
             <div className="sticky top-4 z-50">
               <CustomTrigger />
             </div>

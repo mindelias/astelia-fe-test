@@ -1,9 +1,3 @@
-import React from 'react'
-
-export default function Assets() {
-  return (
-    <div>Assets</div>
-  )
+export default function AlertsPage() {
+  return <div>Alerts</div>
 }
-
- 
