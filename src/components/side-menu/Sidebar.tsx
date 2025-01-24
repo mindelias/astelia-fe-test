@@ -1,47 +1,3 @@
-// import {
-//     Sidebar,
-//     SidebarContent,
-//     SidebarFooter,
-//     SidebarHeader,
-//     SidebarMenu,
-//     SidebarMenuButton,
-//     SidebarMenuItem,
-//   } from "@/components/ui/sidebar";
-//   import { Command } from "lucide-react";
-// import { NavItemGroup } from "./NavItemGroup";
-// import { menu } from "@/utils/data/nav-menu";
-
-//   export function AppSidebar() {
-//     return (
-//       <Sidebar>
-//         <SidebarHeader>
-//           <SidebarMenu>
-//             <SidebarMenuItem>
-//               <SidebarMenuButton size="lg" asChild>
-//                 <a href="#">
-//                   <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-//                     <Command className="size-4" />
-//                   </div>
-//                   <div className="grid flex-1 text-left text-sm leading-tight">
-//                     <span className="truncate font-semibold">Acme Inc</span>
-//                     <span className="truncate text-xs">Enterprise</span>
-//                   </div>
-//                 </a>
-//               </SidebarMenuButton>
-//             </SidebarMenuItem>
-//           </SidebarMenu>
-//         </SidebarHeader>
-//         <SidebarContent>
-//           <NavItemGroup items={menu.navMain} />
-//           <NavItemGroup items={menu.navSecondary} />
-//         </SidebarContent>
-//         <SidebarFooter>
-
-//         </SidebarFooter>
-//       </Sidebar>
-//     );
-//   }
-
 "use client";
 
 import React from "react";
@@ -64,21 +20,19 @@ import CollapsedLogo from "@/assets/logo.svg";
 import Image from "next/image";
 import { PersonStanding } from "lucide-react";
 
+
 export function AppSidebar() {
   const pathname = usePathname();
   const { state } = useSidebar();
   const isCollapsed = state === "collapsed"; // Use sidebar state to track collapsed/expanded
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" className="my-4 rounded-md">
       {/* Sidebar Header */}
-      <SidebarHeader>
+      <SidebarHeader className="relative">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton
-              size="lg"
-              className=""
-            >
+            <SidebarMenuButton size="lg" className="">
               <div className=" ">
                 {/* Full Logo when expanded */}
 
@@ -102,6 +56,9 @@ export function AppSidebar() {
                 )}
               </div>
             </SidebarMenuButton>
+            {/* <div className="absolute -right-5 top-0">
+              <CustomTrigger />
+            </div> */}
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>

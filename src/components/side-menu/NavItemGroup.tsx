@@ -1,67 +1,4 @@
- 
-// import * as React from "react";
-// import {
-//   SidebarGroup,
-//   SidebarGroupContent,
-//   SidebarMenu,
-//   SidebarMenuButton,
-//   SidebarMenuItem,
-// } from "@/components/ui/sidebar";
-// import Link from "next/link";
-// import { cn } from "@/lib/utils";
-// import { getIcon} from "@/utils/icon-map";
-
-// interface NavItemGroupProps {
-//   items: {
-//     title: string;
-//     url: string;
-//     icon: string; // Icon name matching the `iconMap`
-//   }[];
-//   isCollapsed: boolean; // State for collapsed/expanded behavior
-//   currentPath: string; // Pass the current path explicitly
-// }
-
-// export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavItemGroupProps & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
-//   return (
-//     <SidebarGroup {...props}>
-//       <SidebarGroupContent>
-//         <SidebarMenu>
-//           {items.map((item) => {
-//             const icon = getIcon(item.icon); // Fetch icon from the static map
-//             const isActive = currentPath === item.url; // Active state based on `currentPath`
-
-//             return (
-//               <SidebarMenuItem key={item.title}>
-//                 <SidebarMenuButton asChild size="sm">
-//                   <Link
-//                     href={item.url}
-//                     className={cn(
-//                       "flex items-center p-2 rounded-md hover:bg-sidebar-hover",
-//                       isActive && "bg-sidebar-active text-sidebar-active-foreground",
-//                       isCollapsed && "justify-center"
-//                     )}
-//                   >
-//                     {icon && (
-//                       // eslint-disable-next-line @next/next/no-img-element
-//                       <img
-//                         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-//                         src={icon}
-//                         alt={item.title}
-//                         className="w-6 h-6"
-//                       />
-//                     )}
-//                     {!isCollapsed && <span className="ml-3">{item.title}</span>}
-//                   </Link>
-//                 </SidebarMenuButton>
-//               </SidebarMenuItem>
-//             );
-//           })}
-//         </SidebarMenu>
-//       </SidebarGroupContent>
-//     </SidebarGroup>
-//   );
-// }
-import * as React from "react";
+ import * as React from "react";
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -98,10 +35,10 @@ export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavI
                   asChild
                   size="sm"
                   className={cn(
-                    "flex items-center gap-3 py-5 px-5 rounded-md transition-all text-[15px]",
+                    "flex items-center gap-3 py-5 font-normal px-5 rounded-md transition-all text-[15px]",
                     isActive
-                      ? "bg-green-50 rounded-md text-[#525D73] font-normal "
-                      : "text-gray-600 hover:bg-gray-100  hover:text-gray-800",
+                      ? "bg-green-50 rounded-md text-gray-600  "
+                      : "text-gray-700 hover:bg-gray-100  hover:text-gray-800",
                     isCollapsed && "justify-center"
                   )}
                 >
