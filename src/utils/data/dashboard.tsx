@@ -16,21 +16,53 @@ export const descriptionPanelItems = [
     subtitle: "Server",
     icon: <Server className="h-5 w-5 text-[#1873DE]" />,
     description: "Lorem Ipsum Dolor Sit Amet Consectetur.",
-    moreDescription: "Nunc Vitae Tortor Convallis Vitae Arcu. Magna.",
+    moreDescription: "Nunc Vitae Tortor Convallis Vitae Arcu. Magna. Lorem ipsum dolor sit amet consectetur.",
   },
   {
     title: "Lorem S",
     subtitle: "Server",
     icon: <Server className="h-5 w-5 text-[#1873DE]" />,
     description: "Lorem Ipsum Dolor Sit Amet Consectetur.",
-    moreDescription: "Nunc Vitae Tortor Convallis Vitae Arcu. Magna.",
+    moreDescription: "Nunc Vitae Tortor Convallis Vitae Arcu. Lorem ipsum dolor sit amet consectetur. Magna.",
   },
   {
     title: "Lorem T",
     subtitle: "Server",
     icon: <Server className="h-5 w-5 text-[#1873DE]" />,
     description: "Lorem Ipsum Dolor Sit Amet Consectetur.",
-    moreDescription: "Nunc Vitae Tortor Convallis Vitae Arcu. Magna.",
+    moreDescription: "Nunc Vitae Tortor Convallis Vitae Arcu. Lorem ipsum dolor sit amet consectetur. Magna.",
+  },
+];
+
+export const metaDataItems = [
+  {
+    title: "Lorem Ipsum Dolor",
+    date: "10/19/2017",
+  },
+  {
+    title: "Lorem Ipsum Dolor",
+    date: "Ut",
+  },
+  {
+    title: "Lorem Ipsum Dolor",
+    date: "Eros",
+  },
+  {
+    title: "Lorem Ipsum Dolor",
+    date: "✓ Yes",
+    extra: true,
+  },
+  {
+    title: "Lorem Ipsum Dolor",
+    date: "Sit",
+  },
+  {
+    title: "Lorem Ipsum Dolor",
+    date: "Lorem Ipsum Dolor",
+  },
+  {
+    title: "Lorem Ipsum Dolor",
+    date: "Lorem Ipsum Dolor",
   },
 ];
 

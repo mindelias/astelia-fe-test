@@ -1,37 +1,7 @@
+import { metaDataItems } from "@/utils/data/dashboard";
 import React from "react";
 
 export function MetaData() {
-  const metaDataItems = [
-    {
-      title: "Lorem Ipsum Dolor",
-      date: "10/19/2017",
-    },
-    {
-      title: "Lorem Ipsum Dolor",
-      date: "Ut",
-    },
-    {
-      title: "Lorem Ipsum Dolor",
-      date: "Eros",
-    },
-    {
-      title: "Lorem Ipsum Dolor",
-      date: "✓ Yes",
-      extra: true,
-    },
-    {
-      title: "Lorem Ipsum Dolor",
-      date: "Sit",
-    },
-    {
-      title: "Lorem Ipsum Dolor",
-      date: "Lorem Ipsum Dolor",
-    },
-    {
-      title: "Lorem Ipsum Dolor",
-      date: "Lorem Ipsum Dolor",
-    },
-  ];
   return (
     <div className="flex flex-col gap-2 border-t pt-3">
       {metaDataItems.map((item, index) => (

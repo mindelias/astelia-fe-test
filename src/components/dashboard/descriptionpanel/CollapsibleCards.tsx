@@ -38,7 +38,7 @@ export function CollapsibleCards({
 
         {/* TOP CONTENT (always visible) */}
         <div className="flex items-center justify-between gap-2 bg-primary-foreground p-2">
-          <div className="flex    items-center gap-2">
+          <div className="flex items-center gap-2">
             <div className="flex h-12 w-12 flex-1 items-center justify-center rounded-full bg-blue-100">
               {icon /* e.g. <Server /> from lucide-react */}
             </div>
@@ -51,17 +51,20 @@ export function CollapsibleCards({
               </span>
             </div>
           </div>
-           <Separator orientation="vertical" className="h-14 w-[1px]  bg-gray-400" />
-          <div className="text-[13px] font-normal truncate sm:whitespace-break-spaces  w-[50%]  text-gray-900">
+          <Separator
+            orientation="vertical"
+            className="h-14 w-[1px] bg-gray-400"
+          />
+          <div className="w-[50%] truncate text-[13px] font-normal text-gray-900 sm:whitespace-break-spaces">
             {description ?? "Lorem ipsum dolor sit amet consectetur."}
           </div>
         </div>
 
         {/* Collapsible content (only if open) */}
         <CollapsibleContent>
-          <p className="my-4 text-[15px]  font-normal capitalize leading-6 text-gray-700">
+          <p className="my-4 font-sans text-[15px] font-normal capitalize text-gray-700">
             {moreDescription ??
-              "Lorem ipsum dolor sit amet consectetur. Nunc vitae tortor convallis vitae arcu. Magna."}
+              "Lorem ipsum dolor sit amet consectetur. Nunc vitae tortor convallis vitae arcu. Magna"}
           </p>
         </CollapsibleContent>
       </Card>
