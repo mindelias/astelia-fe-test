@@ -61,7 +61,7 @@ export function CollapsibleCards({
         </div>
 
         {/* Collapsible content (only if open) */}
-        <CollapsibleContent>
+        <CollapsibleContent className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden transition-all">
           <p className="my-4 font-sans text-[15px] font-normal capitalize text-gray-700">
             {moreDescription ??
               "Lorem ipsum dolor sit amet consectetur. Nunc vitae tortor convallis vitae arcu. Magna"}

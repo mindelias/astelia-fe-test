@@ -1,4 +1,4 @@
- import * as React from "react";
+import * as React from "react";
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -10,8 +10,12 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { getIcon } from "@/utils/icon-map";
 
-
-export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavItemGroupProps & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
+export function NavItemGroup({
+  items,
+  isCollapsed,
+  currentPath,
+  ...props
+}: NavItemGroupProps & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (
     <SidebarGroup {...props}>
       <SidebarGroupContent>
@@ -21,16 +25,16 @@ export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavI
             const isActive = currentPath === item.url;
 
             return (
-              <SidebarMenuItem key={item.title} className="relative group">
+              <SidebarMenuItem key={item.title} className="group relative">
                 <SidebarMenuButton
                   asChild
                   size="sm"
                   className={cn(
-                    "flex items-center gap-3 py-5 font-normal px-2 rounded-md transition-all text-[15px]",
+                    "flex items-center gap-3 rounded-md px-2 py-5 text-[15px] font-normal transition-all",
                     isActive
-                      ? "bg-green-50 rounded-md text-gray-600  "
-                      : "text-gray-700 hover:bg-gray-100  hover:text-gray-800",
-                    isCollapsed && "justify-center"
+                      ? "rounded-md bg-green-50 text-gray-600"
+                      : "text-gray-700 hover:bg-gray-100 hover:text-gray-800",
+                    isCollapsed && "justify-center",
                   )}
                 >
                   <Link href={item.url}>
@@ -39,7 +43,11 @@ export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavI
                       <img
                         src={icon}
                         alt={item.title}
-                        className="w-6 h-6 group-hover:scale-110  transition-transform"
+                        className={cn(
+                          "h-6 w-6 transition-transform group-hover:scale-110",
+                          // If active, apply a filter
+                          isActive ? "brightness-0 invert-0" : "",
+                        )}
                       />
                     )}
                     {!isCollapsed && <span className="ml-3">{item.title}</span>}

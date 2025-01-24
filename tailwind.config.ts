@@ -81,6 +81,20 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      keyframes: {
+        slideDown: {
+          from: { height: "0" },
+          to: { height: "var(--radix-collapsible-content-height)" },
+        },
+        slideUp: {
+          from: { height: "var(--radix-collapsible-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        slideDown: "slideDown 0.3s ease-out forwards",
+        slideUp: "slideUp 0.3s ease-out forwards",
+      },
     },
   },
   plugins: [
