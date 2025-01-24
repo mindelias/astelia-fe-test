@@ -19,8 +19,3 @@ export const getIcon = (name: keyof typeof iconMap): string => {
   }
   return iconMap[name] ;
 };
-
-// export const useIcon = (name: string): string | null => {
-//   const icon = getIcon(name as keyof typeof getIcon);
-//   return icon || null;
-// };

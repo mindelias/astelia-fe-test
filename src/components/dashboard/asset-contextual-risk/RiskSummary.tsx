@@ -10,13 +10,7 @@ import {
 import { Badge } from "../../ui/badge";
 import { Separator } from "../../ui/separator";
 import { assetsAndContextualRiskItems } from "@/utils/data/dashboard";
-type CarouselItemProps = {
-  tile: string;
-  ip: string;
-  risk: string;
-  badgeBg: string;
-  badgeTextColor: string;
-};
+
 
 export function RiskSummary() {
   const firstChunk = assetsAndContextualRiskItems.slice(0, 2);

@@ -1,5 +1,5 @@
 import { SidebarFooter } from "@/components/ui/sidebar";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { LogOut, User } from "lucide-react";
 import { NavItemGroup } from "./NavItemGroup"; // or your path
