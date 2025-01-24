@@ -44,7 +44,7 @@ export const assetsAndContextualRiskItems = [
     badgeBgDark: "bg-red-500",
   },
   {
-    tile: "Loremipsumdolorsit002",
+    tile: "Loremipsumdoloit2",
     ip: "192.168.1.2",
     risk: "Medium",
     badgeBg: "bg-yellow-100",
@@ -61,7 +61,7 @@ export const assetsAndContextualRiskItems = [
     badgeBgDark: "bg-red-500",
   },
   {
-    tile: "Loremipsumdolorsit004",
+    tile: "Loremipsumdolorsit4",
     ip: "192.168.1.4",
     risk: "Low",
     badgeBg: "bg-green-100",

@@ -51,15 +51,15 @@ export function CollapsibleCards({
               </span>
             </div>
           </div>
-           <Separator orientation="vertical" className="h-14 w-[1px] bg-gray-400" />
-          <div className="text-[13px] font-normal  w-[50%]  text-gray-900">
+           <Separator orientation="vertical" className="h-14 w-[1px]  bg-gray-400" />
+          <div className="text-[13px] font-normal truncate  w-[50%]  text-gray-900">
             {description ?? "Lorem ipsum dolor sit amet consectetur."}
           </div>
         </div>
 
         {/* Collapsible content (only if open) */}
         <CollapsibleContent>
-          <p className="my-4 text-[15px] capitalize leading-6 text-gray-700">
+          <p className="my-4 text-[15px]  font-normal capitalize leading-6 text-gray-700">
             {moreDescription ??
               "Lorem ipsum dolor sit amet consectetur. Nunc vitae tortor convallis vitae arcu. Magna."}
           </p>
