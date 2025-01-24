@@ -3,13 +3,13 @@
 import "@xyflow/react/dist/style.css";
 
 import React from "react";
-import { DescriptionPanel } from "@/components/dashboard/DescriptionPanel";
+import { DescriptionPanel } from "@/components/dashboard/descriptionpanel/DescriptionPanel";
 import { GraphVisualization } from "@/components/dashboard/graphivisualization";
 // import { GraphVisualization } from "@/components/dashboard/GraphVisualization";
-import { RiskSummary } from "@/components/dashboard/RiskSummary";
-import { ContextualRisk } from "@/components/dashboard/ContextualRisk";
+import { RiskSummary } from "@/components/dashboard/asset-contextual-risk/RiskSummary";
+import { ContextualRisk } from "@/components/dashboard/asset-contextual-risk/ContextualRisk";
 import { Card } from "@/components/ui/card";
-import { AssetAndContextualRisk } from "@/components/dashboard/KeyValueList";
+import { AssetAndContextualRisk } from "@/components/dashboard/asset-contextual-risk/AssetAndContextualRisk";
 
 export default function Dashboard() {
   return (

@@ -103,7 +103,7 @@
 "use client";
 
 import { ReactFlow, Background, Position } from "@xyflow/react";
-import { CircularNode } from "./CircularEdgeNode";
+import { CustomNode } from "./CustomNode";
 import {
   ShieldAlert,
   Users,
@@ -115,7 +115,7 @@ import { Separator } from "@/components/ui/separator";
 import { Avatar } from "@/components/ui/avatar";
 
 const nodeTypes = {
-  circular: CircularNode,
+  circular: CustomNode,
 };
 
 // Our example nodes:

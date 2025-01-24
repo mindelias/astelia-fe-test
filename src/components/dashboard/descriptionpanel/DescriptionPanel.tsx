@@ -11,8 +11,8 @@ import {
 } from "@/components/ui/collapsible";
 
 // Import your reusable card
-import { CollapsibleCards } from "./descriptionpanel/CollapsibleCards";
-import { MetaData } from "./descriptionpanel/MetaData";
+import { CollapsibleCards } from "./CollapsibleCards";
+import { MetaData } from "./MetaData";
 import {
   descriptionPanelContent,
   descriptionPanelItems,

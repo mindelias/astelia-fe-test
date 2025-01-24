@@ -1,14 +1,14 @@
 import { ChevronLeft, ChevronRight, Server } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-} from "../ui/carousel";
-import { Badge } from "../ui/badge";
-import { Separator } from "../ui/separator";
+} from "../../ui/carousel";
+import { Badge } from "../../ui/badge";
+import { Separator } from "../../ui/separator";
 import { assetsAndContextualRiskItems } from "@/utils/data/dashboard";
 type CarouselItemProps = {
   tile: string;

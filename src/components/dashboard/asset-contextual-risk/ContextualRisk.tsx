@@ -1,6 +1,6 @@
 import { assetsAndContextualRiskItems } from "@/utils/data/dashboard";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Separator } from "../ui/separator";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
+import { Separator } from "../../ui/separator";
 
 export function ContextualRisk() {
   return (

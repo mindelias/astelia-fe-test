@@ -1,47 +1,66 @@
 "use client"
+
 import { Handle, Position } from "@xyflow/react"
+import { cn } from "@/lib/utils" // or your own utility for merging classes
 
-
-type CustomNodeProps = {
-  data: {
-    label: string
-    ip?: string
-    icon?: React.ReactNode
-    color?: string
-  }
+type NodeData = {
+  label?: string
+  subLabel?: string
+  icon?: JSX.Element
+  overlayIcon?: JSX.Element
+  bgColor?: string
+  textColor?: string
+  overlayBg?: string
 }
 
-export function CustomNode({ data }:  CustomNodeProps) {
-  // data might have: data.icon, data.label, data.ip, data.color, etc.
-  return (
-    <div
-      className="flex flex-col items-center justify-center p-4 rounded-md border shadow-sm bg-white"
-      style={{ width: 140 }}
-    >
-      {/* If you have an icon, you can show it here */}
-      <div className="mb-1">
-        {data.icon /* e.g. <SomeLucideIcon className="text-red-500" /> */}
-      </div>
-      <div className="font-semibold text-gray-800">
-        {data.label}
-      </div>
-      {/* If you have an IP or sub-label */}
-      {data.ip && (
-        <div className="text-xs text-gray-500">{data.ip}</div>
-      )}
+export function CustomNode({ data }: { data: NodeData }) {
+  const {
+    label = "Loremipsu",
+    subLabel, // e.g. "FW" or "192.168.1.1"
+    icon,
+    overlayIcon,
+    bgColor = "bg-pink-100",
+    textColor = "text-gray-800",
+    overlayBg = "bg-purple-500",
+  } = data
 
-      {/* You can position handles as needed.
-          For a simple left-to-right flow, you might do only left+right */}
-      <Handle
-        type="source"
-        position={Position.Right}
-        className="w-2 h-2 bg-blue-400"
-      />
-      <Handle
-        type="target"
-        position={Position.Left}
-        className="w-2 h-2 bg-blue-400"
-      />
+  return (
+    <div className="relative flex flex-col items-center">
+      {/* Circle for the main node */}
+      <div className={cn("relative w-14 h-14 rounded-full flex items-center justify-center", bgColor)}>
+        {/* The main icon in the center */}
+        {icon}
+
+        {/* Overlay icon in a mini bubble (if needed) */}
+        {overlayIcon && (
+          <div
+            className={cn(
+              "absolute -top-2 -right-2 w-5 h-5 rounded-full flex items-center justify-center text-white",
+              overlayBg
+            )}
+            style={{ fontSize: "10px" }}
+          >
+            {overlayIcon}
+          </div>
+        )}
+
+        {/* If you want a small sub-label *inside* the circle (e.g. "FW" in white) */}
+        {subLabel && (
+          <div className="absolute bottom-0 text-xs text-white" style={{ transform: "translateY(110%)" }}>
+            {subLabel}
+          </div>
+        )}
+      </div>
+
+      {/* Label below the circle */}
+      <div className={cn("mt-2 text-sm font-medium", textColor)}>
+        {label}
+      </div>
+
+      {/* We typically hide React Flow handles if you want a “flow” with just edges.
+          But if you do want them: */}
+      <Handle type="target" position={Position.Left} style={{ opacity: 0 }} />
+      <Handle type="source" position={Position.Right} style={{ opacity: 0 }} />
     </div>
   )
 }
