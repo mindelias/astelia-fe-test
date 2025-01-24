@@ -19,6 +19,7 @@ const defaultNodes = [
         icon: <Vernetian className="h-6 w-6 text-red-500" />,
         overlayIcon: <Users className="h-4 w-4" />,
         overlayBg: "bg-purple-500",
+        tooltipText: "Loremipsumm",
       },
     },
     {
@@ -30,6 +31,7 @@ const defaultNodes = [
         label: "Loremipsu",
         bgColor: "bg-blue-100",
         icon: <Server className="h-5 w-5 text-blue-500" />,
+        tooltipText: "Loremipsu",
       },
     },
     {
@@ -41,6 +43,7 @@ const defaultNodes = [
         label: "Loremipsu",
         bgColor: "bg-blue-100",
         icon: <Server className="h-5 w-5 text-blue-500" />,
+        tooltipText: "Loremipsu",
       },
     },
     {
@@ -56,6 +59,7 @@ const defaultNodes = [
         // Red overlay icon (like a shield with X)
         overlayIcon: <ShieldAlert className="h-3 w-3" />,
         overlayBg: "bg-red-500",
+        tooltipText: "Loremipsumdolorsit",
       },
     },
     {
@@ -70,6 +74,7 @@ const defaultNodes = [
         icon: <Server className="h-5 w-5 text-blue-500" />,
         overlayIcon: <ShieldAlert className="h-3 w-3" />,
         overlayBg: "bg-red-500",
+        tooltipText: "Loremipsumdolorsit002",
       },
     },
   ];
