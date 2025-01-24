@@ -26,7 +26,7 @@ export function NavItemGroup({ items, isCollapsed, currentPath, ...props }: NavI
                   asChild
                   size="sm"
                   className={cn(
-                    "flex items-center gap-3 py-5 font-normal px-5 rounded-md transition-all text-[15px]",
+                    "flex items-center gap-3 py-5 font-normal px-2 rounded-md transition-all text-[15px]",
                     isActive
                       ? "bg-green-50 rounded-md text-gray-600  "
                       : "text-gray-700 hover:bg-gray-100  hover:text-gray-800",

@@ -13,7 +13,7 @@ import { AssetAndContextualRisk } from "@/components/dashboard/asset-contextual-
 
 export default function Dashboard() {
   return (
-    <div className="grid max-h-[calc(100vh-4rem)] grid-cols-1 mx-5 gap-6 p-6 lg:grid-cols-12">
+    <div className="grid max-h-[calc(100vh-4rem)] grid-cols-1 mx-5 gap-6 p-2 lg:py-6 lg:px-4 lg:grid-cols-12">
       {/* Left Panel (Description) */}
       <Card className="max-h-[calc(100vh-6rem)] overflow-scroll p-5 scrollbar-hide md:col-span-4">
         <DescriptionPanel />

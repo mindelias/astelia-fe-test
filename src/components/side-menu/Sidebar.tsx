@@ -34,7 +34,7 @@ export function AppSidebar() {
       collapsible="icon"
       className={cn(
         "rounded-md transition-all duration-300",
-        isCollapsed ? "!w-20 px-2" : "px-4",
+        isCollapsed ? "!w-20 px-2" : "px-1",
       )}
     >
       {/* Sidebar Header */}
@@ -51,7 +51,7 @@ export function AppSidebar() {
                     alt="Logo"
                     // width={50}
                     // height={50}
-                    className="h-25 w-25"
+                    className="h-22 w-22"
                   />
                 ) : (
                   // Collapsed Logo

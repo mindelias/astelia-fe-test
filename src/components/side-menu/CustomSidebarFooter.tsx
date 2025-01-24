@@ -29,14 +29,13 @@ export function CustomSidebarFooter({
       />
 
       {/* User info & logout button */}
-      <div className="flex items-center justify-between px-4 py-3">
+      <div className="flex items-center justify-between px-2 py-3">
         {/* If expanded, show avatar + name + subtitle */}
         {!isCollapsed ? (
           <div className="flex items-center space-x-3">
-            <Avatar className="h-8 w-8">
-              <AvatarImage src="/avatars/user.png" alt="User Avatar" />
-              <AvatarFallback>
-                <User className="h-4 w-4" />
+            <Avatar className="h-12 w-12">
+               <AvatarFallback>
+                <User className="h-6 w-6" />
               </AvatarFallback>
             </Avatar>
 
@@ -47,10 +46,9 @@ export function CustomSidebarFooter({
           </div>
         ) : (
           /* If collapsed, just show the avatar (or icon). */
-          <Avatar className="h-8 w-8">
-            <AvatarImage src="/avatars/user.png" alt="User Avatar" />
-            <AvatarFallback>
-              <User className="h-4 w-4" />
+          <Avatar className="h-12 w-12">
+             <AvatarFallback>
+              <User className="h-6 w-6" />
             </AvatarFallback>
           </Avatar>
         )}
