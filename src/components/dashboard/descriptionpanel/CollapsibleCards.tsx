@@ -52,7 +52,7 @@ export function CollapsibleCards({
             </div>
           </div>
            <Separator orientation="vertical" className="h-14 w-[1px]  bg-gray-400" />
-          <div className="text-[13px] font-normal truncate  w-[50%]  text-gray-900">
+          <div className="text-[13px] font-normal truncate sm:whitespace-break-spaces  w-[50%]  text-gray-900">
             {description ?? "Lorem ipsum dolor sit amet consectetur."}
           </div>
         </div>
