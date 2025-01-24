@@ -201,7 +201,7 @@ export function GraphVisualization() {
       <p className="mb-5 text-sm font-semibold text-green-700 md:text-lg">
         Lorem Lorem Lorem
       </p>
-      <div className="h-[380px] w-full rounded-md bg-[#FAFAFA]">
+      <div className="h-[380px] w-full rounded-md bg-primary-foreground">
         <div className="h-[318px] w-full ">
           <ReactFlow
             nodeTypes={nodeTypes}
