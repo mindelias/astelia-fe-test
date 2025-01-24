@@ -13,9 +13,9 @@ import { AssetAndContextualRisk } from "@/components/dashboard/asset-contextual-
 
 export default function Dashboard() {
   return (
-    <div className="grid max-h-[calc(100vh-4rem)] grid-cols-1 mx-5 gap-6 p-2 lg:py-6 lg:px-4 lg:grid-cols-12">
+    <div className="grid max-h-[calc(100vh-2rem)] grid-cols-1 mx-5 gap-6 p-2 lg:py-6 lg:px-4 lg:grid-cols-12">
       {/* Left Panel (Description) */}
-      <Card className="max-h-[calc(100vh-6rem)] overflow-scroll p-5 scrollbar-hide md:col-span-4">
+      <Card className="max-h-[calc(100vh-3rem)] overflow-scroll p-5 scrollbar-hide md:col-span-4">
         <DescriptionPanel />
         <div className="block space-y-6 lg:hidden">
           <AssetAndContextualRisk />
@@ -23,7 +23,7 @@ export default function Dashboard() {
       </Card>
 
       {/* Center Panel (Graph) */}
-      <Card className="space-y-6 p-5  hidden lg:block md:col-span-8 max-h-[calc(100vh-7rem)] overflow-scroll scrollbar-hide ">
+      <Card className="space-y-6 p-5   hidden lg:block md:col-span-8 max-h-[calc(100vh-4rem)] overflow-scroll scrollbar-hide ">
         <GraphVisualization />
         {/* <div className="hidden  lg:grid  md:grid-cols-2 md:gap-6">
           <RiskSummary />
