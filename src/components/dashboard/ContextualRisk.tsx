@@ -1,22 +1,41 @@
-import { Card } from "../ui/card";
+import { assetsAndContextualRiskItems } from "@/utils/data/dashboard";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Separator } from "../ui/separator";
 
 export function ContextualRisk() {
-    return (
-     <Card className="p-4 min-w-sm">
-        <h2 className="text-lg font-semibold text-gray-800 mb-4">
+  return (
+    <Card className="mt-5">
+      <CardHeader className="p-3 px-4">
+        <CardTitle className="font-sans text-[13px] font-normal text-gray-400">
           Contextual Risk
-        </h2>
-        <div className="flex justify-center items-center">
+        </CardTitle>
+      </CardHeader>
+      <Separator />
+      <CardContent>
+        <div className="flex items-center justify-between space-x-8 space-y-8">
+          {/* Legend */}
+          <div className="space-y-2 text-sm">
+            {assetsAndContextualRiskItems.map((item, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <span
+                  className={`inline-block h-2 w-2 rounded-full ${item.badgeBgDark}`}
+                />
+                <span>{item.risk}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Big circular “2” ring */}
           <div className="relative">
-            <svg className="w-24 h-24">
-              <circle cx="50%" cy="50%" r="40%" fill="none" stroke="#ef4444" strokeWidth="8" />
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-lg font-semibold">2</span>
-            </div>
+            {/* The ring border */}
+            <div className="h-24 w-24 rounded-full border-[10px] border-red-500" />
+            {/* Centered number */}
+            <span className="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-foreground">
+              2
+            </span>
           </div>
         </div>
-      </Card>
-    );
-  }
-  
+      </CardContent>
+    </Card>
+  );
+}
