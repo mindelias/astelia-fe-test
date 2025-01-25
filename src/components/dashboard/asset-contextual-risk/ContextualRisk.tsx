@@ -12,7 +12,7 @@ export function ContextualRisk() {
       </CardHeader>
       <Separator />
       <CardContent>
-        <div className="flex items-center justify-between space-x-8 space-y-8">
+        <div className="flex items-center justify-between space-x-8 space-y-10">
           {/* Legend */}
           <div className="space-y-2 text-sm">
             {assetsAndContextualRiskItems.map((item, index) => (
@@ -28,7 +28,7 @@ export function ContextualRisk() {
           {/* Big circular “2” ring */}
           <div className="relative">
             {/* The ring border */}
-            <div className="h-24 w-24 rounded-full border-[10px] border-red-500" />
+            <div className="h-28 w-28 rounded-full border-[6px] border-red-500" />
             {/* Centered number */}
             <span className="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-foreground">
               2

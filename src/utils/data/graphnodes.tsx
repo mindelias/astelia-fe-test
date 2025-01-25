@@ -15,7 +15,7 @@ const defaultNodes = [
       data: {
         label: "Loremipsumm",
         subLabel: "FW",
-        bgColor: "bg-red-50", // or however you want that soft pink
+        bgColor: "bg-red-50",  
         icon: <Vernetian className="h-6 w-6 text-red-500" />,
         overlayIcon: <Users className="h-4 w-4" />,
         overlayBg: "bg-purple-500",
@@ -56,7 +56,7 @@ const defaultNodes = [
         subLabel: "192.168.1.1",
         bgColor: "bg-blue-100",
         icon: <Server className="h-5 w-5 text-blue-500" />,
-        // Red overlay icon (like a shield with X)
+        // Red overlay icon 
         overlayIcon: <ShieldAlert className="h-3 w-3" />,
         overlayBg: "bg-red-500",
         tooltipText: "Loremipsumdolorsit",

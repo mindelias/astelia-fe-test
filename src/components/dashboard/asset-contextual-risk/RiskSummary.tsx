@@ -1,3 +1,4 @@
+import React from "react";
 import { ChevronLeft, ChevronRight, Server } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import {
@@ -10,12 +11,15 @@ import {
 import { Badge } from "../../ui/badge";
 import { Separator } from "../../ui/separator";
 import { assetsAndContextualRiskItems } from "@/utils/data/dashboard";
+import { chunkArray } from "@/utils/helper";
 
 
 export function RiskSummary() {
-  const firstChunk = assetsAndContextualRiskItems.slice(0, 2);
-  const secondChunk = assetsAndContextualRiskItems.slice(2, 4);
-  const CarouselItemRender = ({ data }: { data: CarouselItemProps }) => {
+  const chunkedAssets = React.useMemo(() => {
+    return chunkArray(assetsAndContextualRiskItems, 2)
+  }, [])
+   
+  const CarouselItemRow = ({ data }: { data: CarouselItemProps }) => {
     return (
       <div className="flex items-center justify-between border-t px-4 py-3 first:border-t-0">
         <div className="flex items-center space-x-3">
@@ -55,18 +59,13 @@ export function RiskSummary() {
         <Carousel>
           <CarouselContent>
             {/* Row 1 */}
-            <CarouselItem>
-              {firstChunk.map((item) => (
-                <CarouselItemRender key={item.tile} data={item} />
-              ))}
-            </CarouselItem>
-
-            {/* Row 2 */}
-            <CarouselItem>
-              {secondChunk.map((item) => (
-                <CarouselItemRender key={item.tile} data={item} />
-              ))}
-            </CarouselItem>
+             {chunkedAssets.map((chunk, idx) => (
+              <CarouselItem key={idx}>
+                {chunk.map((item) => (
+                  <CarouselItemRow key={item.tile} data={item} />
+                ))}
+              </CarouselItem>
+            ))}
           </CarouselContent>
 
           {/* Pagination / arrows */}

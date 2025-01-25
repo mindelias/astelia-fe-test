@@ -1,79 +1,81 @@
-"use client"
+"use client";
 
-import { Handle, Position } from "@xyflow/react"
-import { cn } from "@/lib/utils" // or your own utility for merging classes
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
-
+import { Handle, Position } from "@xyflow/react";
+import { cn } from "@/lib/utils"; // or your own utility for merging classes
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function CustomNode({ data }: { data: NodeData }) {
   const {
     label = "Loremipsu",
-    subLabel, // e.g. "FW" or "192.168.1.1"
+    subLabel,
     icon,
     overlayIcon,
     tooltipText,
     bgColor = "bg-pink-100",
     textColor = "text-gray-800",
     overlayBg = "bg-purple-500",
-  } = data
+  } = data;
 
   return (
     <Tooltip>
-    {/* The “trigger” is our node's main circle + label */}
-    <TooltipTrigger asChild>
-      <div className="relative flex flex-col items-center pointer-events-auto">
-        <div
-          className={cn(
-            "relative w-14 h-14 rounded-full flex items-center justify-center",
-            bgColor
-          )}
-        >
-          {icon}
+      <TooltipTrigger asChild>
+        <div className="pointer-events-auto relative flex flex-col items-center">
+          <div
+            className={cn(
+              "relative flex h-14 w-14 items-center justify-center rounded-full",
+              bgColor,
+            )}
+          >
+            {icon}
 
-          {overlayIcon && (
-            <div
-              className={cn(
-                "absolute -top-2 -right-2 w-5 h-5 rounded-full flex items-center justify-center text-white",
-                overlayBg
-              )}
-              style={{ fontSize: "10px" }}
-            >
-              {overlayIcon}
-            </div>
-          )}
+            {overlayIcon && (
+              <div
+                className={cn(
+                  "absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full text-white",
+                  overlayBg,
+                )}
+                style={{ fontSize: "10px" }}
+              >
+                {overlayIcon}
+              </div>
+            )}
 
-          {subLabel && (
-            <div
-              className="absolute bottom-0 text-xs text-white"
-              style={{ transform: "translateY(110%)" }}
-            >
-              {subLabel}
-            </div>
-          )}
+            {subLabel && (
+              <div
+                className="absolute bottom-0 text-xs text-white"
+                style={{ transform: "translateY(110%)" }}
+              >
+                {subLabel}
+              </div>
+            )}
+          </div>
+          {/* Label below the circle */}
+          <div className={cn("mt-2 text-sm font-medium", textColor)}>
+            {label}
+          </div>
+
+          {/* React Flow handles */}
+          <Handle
+            type="target"
+            position={Position.Left}
+            style={{ opacity: 0 }}
+          />
+          <Handle
+            type="source"
+            position={Position.Right}
+            style={{ opacity: 0 }}
+          />
         </div>
-        {/* Label below the circle */}
-        <div className={cn("mt-2 text-sm font-medium", textColor)}>
-          {label}
-        </div>
+      </TooltipTrigger>
 
-        {/* React Flow handles (optional) */}
-        <Handle
-          type="target"
-          position={Position.Left}
-          style={{ opacity: 0 }}
-        />
-        <Handle
-          type="source"
-          position={Position.Right}
-          style={{ opacity: 0 }}
-        />
-      </div>
-    </TooltipTrigger>
-
-    {/* The actual tooltip content */}
-    <TooltipContent>
-      <p className="text-sm">{tooltipText}</p>
-    </TooltipContent>
-  </Tooltip>
-  )
+      {/* tooltip content */}
+      <TooltipContent>
+        <p className="text-sm">{tooltipText}</p>
+      </TooltipContent>
+    </Tooltip>
+  );
 }

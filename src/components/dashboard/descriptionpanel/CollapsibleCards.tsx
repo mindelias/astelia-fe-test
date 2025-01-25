@@ -26,8 +26,7 @@ export function CollapsibleCards({
     <Collapsible open={open} onOpenChange={setOpen}>
       <Card
         className="cursor-pointer space-y-2 p-4 transition-colors hover:bg-muted"
-        // Make the entire card clickable to toggle
-        onClick={() => setOpen(!open)}
+         onClick={() => setOpen(!open)}
       >
         {/* TITLE ROW */}
         <div className="flex items-center justify-between">
@@ -40,7 +39,7 @@ export function CollapsibleCards({
         <div className="flex items-center justify-between gap-2 bg-primary-foreground p-2">
           <div className="flex items-center gap-2">
             <div className="flex h-12 w-12 flex-1 items-center justify-center rounded-full bg-blue-100">
-              {icon /* e.g. <Server /> from lucide-react */}
+              {icon }
             </div>
             <div className="flex flex-col">
               <span className="text-xs font-medium text-gray-900">
