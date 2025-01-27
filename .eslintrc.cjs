@@ -36,7 +36,15 @@ const config = {
           "attributes": false
         }
       }
-    ]
+    ],
+    // Temporarily disabling the requested rules
+    "react/jsx-key": "off",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-redundant-type-constituents": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off"
   }
-}
+};
+
 module.exports = config;

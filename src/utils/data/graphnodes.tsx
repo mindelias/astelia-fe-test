@@ -100,7 +100,7 @@ const defaultNodes = [
       tooltipText: "",
       details: [
         [
-          <div key={"loremipsum"} className="flex items-center gap-2">
+          <div key={"loremipsum11"} className="flex items-center gap-2">
             <div
               key="loremipsum"
               className="flex h-12 w-12 flex-1 items-center justify-center rounded-full bg-blue-100"
@@ -155,7 +155,7 @@ const defaultNodes = [
       tooltipText: "",
       details: [
         [
-          <div key={"loremipsum"} className="flex items-center gap-2">
+          <div key={"loremipsum113"} className="flex items-center gap-2">
             <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-blue-100">
               <Server className="relative h-5 w-5 text-blue-500" />
             </div>
@@ -212,7 +212,7 @@ const defaultNodes = [
       tooltipText: "",
       details: [
         [
-          <div key={"loremipsum"} className="flex items-center gap-2">
+          <div key={"loremipsum114"} className="flex items-center gap-2">
             <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-blue-100">
               <Server className="relative h-5 w-5 text-blue-500" />
             </div>
