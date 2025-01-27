@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import DashoboardIcon from "@/assets/icons/dashboard.svg";
 import { Icon } from "./NavIcon";
 
 export function NavItemGroup({
@@ -21,9 +20,7 @@ export function NavItemGroup({
     <SidebarGroup {...props}>
       <SidebarGroupContent>
         <SidebarMenu className="space-y-2 px-2">
-          {items.map((item) => {
-            // const icon = getIcon(item.icon);
-            const NavIcon = item.icon;
+          {items.map((item) => { 
             const isActive = currentPath === item.url;
 
             return (

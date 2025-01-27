@@ -7,6 +7,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { NodePopover } from "./NodePopover";
+import { popoverConfig } from "@/utils/data/graphnodes";
 
 export function CustomNode({ data }: { data: NodeData }) {
   const {
@@ -18,10 +20,14 @@ export function CustomNode({ data }: { data: NodeData }) {
     bgColor = "bg-pink-100",
     textColor = "text-gray-800",
     overlayBg = "bg-purple-500",
+    details,
+    headerDetails,
+    configKey,
+    tooltipPosition = "bottom",
   } = data;
 
   return (
-    <Tooltip>
+    <Tooltip >
       <TooltipTrigger asChild>
         <div className="pointer-events-auto relative flex flex-col items-center">
           <div
@@ -73,8 +79,26 @@ export function CustomNode({ data }: { data: NodeData }) {
       </TooltipTrigger>
 
       {/* tooltip content */}
-      <TooltipContent>
-        <p className="text-sm">{tooltipText}</p>
+      {/* <TooltipContent  className="bg-primary-foreground shadow-lg ">
+        <p className="text-sm text-red-400">{tooltipText}</p>
+      </TooltipContent> */}
+      <TooltipContent className={cn(
+          "relative bg-primary-foreground  rounded shadow-md border border-gray-200 p-3",
+          tooltipPosition === "top" && "top-[-150%] left-0",
+          tooltipPosition === "bottom" && "top-[150%] left-0"
+        )}>
+        <NodePopover
+          label={tooltipText!}
+          subLabel={label}
+          headerText={tooltipText!}
+          headerDetails={<p className="text-xs">{headerDetails}</p>}
+          details={details ?? []}
+          config={
+            popoverConfig[
+              configKey  as keyof typeof popoverConfig
+            ] as unknown as TPopoverConfig
+          }
+        />
       </TooltipContent>
     </Tooltip>
   );
