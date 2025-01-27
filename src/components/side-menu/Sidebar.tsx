@@ -15,7 +15,6 @@ import { useSidebar } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import Logo from "@/assets/full-logo.svg";
 import CollapsedLogo from "@/assets/logo.svg";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { CustomSidebarFooter } from "./CustomSidebarFooter";
 
@@ -42,20 +41,10 @@ export function AppSidebar() {
                 {/* Full Logo when expanded */}
 
                 {!isCollapsed ? (
-                  <Image
-                    src={Logo as string}
-                    alt="Logo"
-                    className="h-22 w-22"
-                  />
+                  <Logo  className="h-28 w-28" />
                 ) : (
                   // Collapsed Logo
-                  <Image
-                    src={CollapsedLogo as string}
-                    alt="Logo"
-                    width={20}
-                    height={20}
-                    className=""
-                  />
+                  <CollapsedLogo width={20} height={20} className="" />
                 )}
               </div>
             </SidebarMenuButton>
@@ -77,6 +66,7 @@ export function AppSidebar() {
         menu={menu}
         isCollapsed={isCollapsed}
         pathname={pathname}
+        
       />
     </Sidebar>
   );

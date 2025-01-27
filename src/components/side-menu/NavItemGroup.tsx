@@ -8,7 +8,8 @@ import {
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { getIcon } from "@/utils/icon-map";
+import DashoboardIcon from "@/assets/icons/dashboard.svg";
+import { Icon } from "./NavIcon";
 
 export function NavItemGroup({
   items,
@@ -21,7 +22,8 @@ export function NavItemGroup({
       <SidebarGroupContent>
         <SidebarMenu className="space-y-2 px-2">
           {items.map((item) => {
-            const icon = getIcon(item.icon);
+            // const icon = getIcon(item.icon);
+            const NavIcon = item.icon;
             const isActive = currentPath === item.url;
 
             return (
@@ -38,19 +40,22 @@ export function NavItemGroup({
                   )}
                 >
                   <Link href={item.url}>
-                    {icon && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={icon}
-                        alt={item.title}
+                    {item.icon && (
+                      <Icon
+                        name={item.icon}
+                        key={item.title}
                         className={cn(
-                          "h-5 w-5 transition-transform group-hover:scale-110",
-                          // If active, apply a filter
-                          isActive ? "brightness-0 invert-0" : "",
+                          "!h-[20px] !w-[20px] !text-[#A3A9B6] transition-transform group-hover:scale-110",
+                          isActive ? "!text-black" : "",
+                          // isActive ? "  !text-black" : "brightness-0 invert-0",
                         )}
                       />
                     )}
-                    {!isCollapsed && <span className="ml-3 font-sans text-[15px] font-normal text-gray-700">{item.title}</span>}
+                    {!isCollapsed && (
+                      <span className="ml-3 font-sans text-[15px] font-normal text-gray-700">
+                        {item.title}
+                      </span>
+                    )}
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
