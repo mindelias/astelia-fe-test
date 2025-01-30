@@ -27,7 +27,7 @@ const defaultNodes = [
         ["1.2.3.4", "1.2.3.4", "1.2.3.4", "1.2.3.4"],
         ["1.2.3.4", "1.2.3.4", "1.2.3.4"],
         [
-          <Badge className="font-semibold font-sans bg-purple-100 text-purple-500">
+          <Badge key ="Loremipsumm-4-1" className="font-semibold font-sans bg-purple-100 text-purple-500">
             Lorem: 1.2.3.4
           </Badge>
         ]
@@ -48,7 +48,7 @@ const defaultNodes = [
       tooltipText: "",
       details: [
         [
-          <div key={"loremipsum"} className="flex items-center gap-2">
+          <div key={"Loremipsu-1-1"} className="flex items-center gap-2">
             <div
               key="loremipsum"
               className="flex h-12 w-12 flex-1 items-center justify-center rounded-full bg-blue-100"
@@ -66,7 +66,7 @@ const defaultNodes = [
         [
           <p
             className="text-[15px] font-semibold text-gray-700"
-            key="loremipsum"
+            key="Loremipsu-2-1"
           >
             Lorem: Loremipsum Loremipsum
           </p>,
@@ -77,7 +77,7 @@ const defaultNodes = [
           "1.2.3.4",
           <p
             className="text-[15px] font-semibold text-gray-700"
-            key="loremipsum"
+            key="Loremipsu-3-2"
           >
             Loremipsum
           </p>,
@@ -100,7 +100,7 @@ const defaultNodes = [
       tooltipText: "",
       details: [
         [
-          <div key={"loremipsum11"} className="flex items-center gap-2">
+          <div key={"loremipsu-2-1"} className="flex items-center gap-2">
             <div
               key="loremipsum"
               className="flex h-12 w-12 flex-1 items-center justify-center rounded-full bg-blue-100"
@@ -118,7 +118,7 @@ const defaultNodes = [
         [
           <p
             className="text-[15px] font-semibold text-gray-700"
-            key="loremipsum"
+            key="loremipsu-2-2"
           >
             Lorem: Loremipsum Loremipsum
           </p>,
@@ -129,7 +129,7 @@ const defaultNodes = [
           "1.2.3.4",
           <p
             className="text-[15px] font-semibold text-gray-700"
-            key="loremipsum"
+            key="loremipsu-2-3"
           >
             Loremipsum
           </p>,
@@ -155,7 +155,7 @@ const defaultNodes = [
       tooltipText: "",
       details: [
         [
-          <div key={"loremipsum113"} className="flex items-center gap-2">
+          <div key={"loremipsumdolorsit-1"} className="flex items-center gap-2">
             <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-blue-100">
               <Server className="relative h-5 w-5 text-blue-500" />
             </div>
@@ -172,24 +172,24 @@ const defaultNodes = [
         [
           <p
             className="text-[15px] font-semibold text-gray-700"
-            key="loremipsum"
+            key="loremipsumdolorsit-2-1"
           >
             Lorem: Loremipsum
           </p>,
 
-          <Badge className="bg-yellow-50 font-sans text-[15px] font-semibold text-yellow-400">
+          <Badge key="loremipsumdolorsit-2-2" className="bg-yellow-50 font-sans text-[15px] font-semibold text-yellow-400">
             Lorem"ipsum"
           </Badge>,
         ],
         [
           <p
             className="font-sans text-[15px] font-semibold text-gray-700"
-            key="loremipsum"
+            key="loremipsumdolorsit-3-1"
           >
             Loremipsum:
           </p>,
 
-          <Badge className="bg-blue-50 font-sans text-[13px] font-semibold text-blue-500">
+          <Badge key="loremipsumdolorsit-3-2" className="bg-blue-50 font-sans text-[13px] font-semibold text-blue-500">
             1234,5678
           </Badge>,
         ],
@@ -212,7 +212,7 @@ const defaultNodes = [
       tooltipText: "",
       details: [
         [
-          <div key={"loremipsum114"} className="flex items-center gap-2">
+          <div key={"lloremipsumdolorsit002-1"} className="flex items-center gap-2">
             <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-blue-100">
               <Server className="relative h-5 w-5 text-blue-500" />
             </div>
@@ -229,24 +229,24 @@ const defaultNodes = [
         [
           <p
             className="text-[15px] font-semibold text-gray-700"
-            key="loremipsum"
+            key="loremipsumdolorsit002-2-1"
           >
             Lorem: Loremipsum
           </p>,
 
-          <Badge className="bg-yellow-50 font-sans text-[15px] font-semibold text-yellow-400">
+          <Badge key="loremipsumdolorsit002-2-2"  className="bg-yellow-50 font-sans text-[15px] font-semibold text-yellow-400">
             Lorem"ipsum"
           </Badge>,
         ],
         [
           <p
             className="font-sans text-[15px] font-semibold text-gray-700"
-            key="loremipsum"
+            key="loremipsumdolorsit002-3-1"
           >
             Loremipsum:
           </p>,
 
-          <Badge className="bg-blue-50 font-sans text-[13px] font-semibold text-blue-500">
+          <Badge key="loremipsumdolorsit002-3-2" className="bg-blue-50 font-sans text-[13px] font-semibold text-blue-500">
             1234,5678
           </Badge>,
         ],

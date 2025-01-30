@@ -34,8 +34,10 @@ type NodeData = {
     subLabel?: string;
     headerText: string;
     headerDetails: React.ReactNode;
-    details: string[];
+    details:  DetailsGroup[]
     config:  TPopoverConfig
   }
+
+  type DetailsGroup = (string | React.ReactNode)[]
   
   

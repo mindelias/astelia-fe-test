@@ -27,7 +27,7 @@ export const NodePopover: React.FC<PopoverProps> = ({
 
       {/* Details */}
       <div className="mt-3 flex flex-col gap-2">
-        {details.map((group: any|string[], groupIndex) => (
+        {details.map((group: DetailsGroup, groupIndex) => (
           <div key={`group-${groupIndex}`} className="flex items-center gap-2 flex-wrap">
 
             {group.map((detail: string | React.ReactNode, detailIndex: number) => {
