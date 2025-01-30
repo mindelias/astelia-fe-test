@@ -178,7 +178,7 @@ const defaultNodes = [
           </p>,
 
           <Badge key="loremipsumdolorsit-2-2" className="bg-yellow-50 font-sans text-[15px] font-semibold text-yellow-400">
-            Lorem"ipsum"
+            Lorem&quot;ipsum&quot;
           </Badge>,
         ],
         [
@@ -235,7 +235,7 @@ const defaultNodes = [
           </p>,
 
           <Badge key="loremipsumdolorsit002-2-2"  className="bg-yellow-50 font-sans text-[15px] font-semibold text-yellow-400">
-            Lorem"ipsum"
+            Lorem&quot;ipsum&quot;
           </Badge>,
         ],
         [

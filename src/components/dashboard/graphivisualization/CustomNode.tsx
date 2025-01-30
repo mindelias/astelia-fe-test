@@ -92,7 +92,7 @@ export function CustomNode({ data }: { data: NodeData }) {
           subLabel={label}
           headerText={tooltipText!}
           headerDetails={<p className="text-xs">{headerDetails}</p>}
-          details={details ?? []}
+          details={details as unknown as DetailsGroup[]}
           config={
             popoverConfig[
               configKey  as keyof typeof popoverConfig
